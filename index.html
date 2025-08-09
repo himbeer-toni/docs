@@ -2,29 +2,31 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Himbeertonis Infos</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <title>Documents I want to be accessible</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
   <body>
-    <h1>Himbeertonis Infos</h1>
-    <h2>Dokumente</h2>
+    <h1>Documents</h1>
     <ul>
-      <li><a href="#" onclick="showMarkdown('test.md');return false;">test.md anzeigen</a></li>
-      <li><a href="#" onclick="showMarkdown('README.md');return false;">README.md anzeigen</a></li>
-      <li><a href="test.pdf" target="_blank">test.pdf anzeigen</a></li>
-      <li><a href="README.pdf" target="_blank">README.pdf anzeigen</a></li>
+      <li><a href="#" onclick="showMarkdown('/Himbeer-toni/docs/main/blob/Samsung-AGB-Jul-2025.md');return false;">Samsung-AGB-Jul-2025.md anzeigen</a></li>
+      <li><a href="Samsung-AGB-Jul-2025.pdf" target="_blank">Samsung-AGB-Jul-2025.pdf anzeigen</a></li>
+      <!-- Add more .md and .pdf links as needed -->
     </ul>
     <div id="md-output"></div>
     <script>
       async function showMarkdown(mdFile) {
-        const response = await fetch(mdFile);
-        if (!response.ok) {
-          document.getElementById('md-output').innerHTML = "Markdown-Datei nicht gefunden!";
-          return;
+        try {
+          const response = await fetch(mdFile);
+          if (!response.ok) {
+            document.getElementById('md-output').innerHTML = "Markdown-Datei nicht gefunden!";
+            return;
+          }
+          const text = await response.text();
+          document.getElementById('md-output').innerHTML = marked.parse(text);
+        } catch (e) {
+          document.getElementById('md-output').innerHTML = "Fehler beim Laden!";
         }
-        const text = await response.text();
-        document.getElementById('md-output').innerHTML = marked.parse(text);
       }
     </script>
   </body>
