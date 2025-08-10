@@ -30,7 +30,7 @@ header h1 {
 }
 
 /* Hauptinhalt */
-main {
+main,body {
   padding: 1rem;
 }
 
