@@ -20,7 +20,7 @@
 
 ---
 
-## 🛑 Verboten
+## ❌ Verboten
 - Quellcode der Dienste knacken, umgehen oder verändern.
 - Schadsoftware, Spam oder betrügerische Inhalte verbreiten.
 - Gewalt-, Hass-, Pornografie-, Drogen- oder illegale Inhalte posten.
