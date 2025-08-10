@@ -1,0 +1,21 @@
+:root {
+  --body-bg: #fdf6fa;       /* Light white-pink background */
+  --body-color: #222;
+  --btn-bg: #fae4f1;
+  --btn-bg-hover: #f8d0e4;
+  --btn-fg: #a02a55;
+  --popup-bg: #fff8fc;
+  --border-color: #f3b6cc;
+  --headline-bg: #fff6fa;
+  --subheadline-color: #a44a68;
+  --nav-bg: #fff2f8;
+  --diff-bg: #fff3f8;
+  --git-red: #be1e1e;
+  --git-green: #18741a;
+  --git-yellow: #b68c00;
+  --git-cyan: #1687a7;
+  --git-bold: #a02a55;
+  --meta-date: #b46c8c;
+  --meta-author: #e16ea9;
+  --meta-subject: #a02a55;
+}
