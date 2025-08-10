@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Documents I want to be accessible</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
   <body>
     <h1>Documents</h1>
@@ -14,21 +13,5 @@
       <li><a href="Samsung-AGB-Jul-2025.pdf" target="_blank">Samsung-AGB-Jul-2025.pdf anzeigen</a></li>
       <!-- Add more .md and .pdf links as needed -->
     </ul>
-    <div id="md-output"></div>
-    <script>
-      async function showMarkdown(mdFile) {
-        try {
-          const response = await fetch(mdFile);
-          if (!response.ok) {
-            document.getElementById('md-output').innerHTML = "Markdown-Datei nicht gefunden!";
-            return;
-          }
-          const text = await response.text();
-          document.getElementById('md-output').innerHTML = marked.parse(text);
-        } catch (e) {
-          document.getElementById('md-output').innerHTML = "Fehler beim Laden!";
-        }
-      }
-    </script>
   </body>
 </html>
