@@ -28,6 +28,9 @@ header h1 {
   margin: 0;
   font-size: 1.8rem;
 }
+td.number_right {
+	text-align: right;
+}   
 
 /* Hauptinhalt */
 body,main {
