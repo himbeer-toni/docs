@@ -1,0 +1,12 @@
+for file in *.[mt][dx]*
+do
+  pandoc "$file" \
+    --standalone \
+    --from markdown \
+    --to html5 \
+    --css style.css \
+    --css himbeertoni-theme.css \
+    --metadata pagetitle="${file%.*}" \
+    --include-in-header <(echo '<link rel="stylesheet" href="https://fonts.bunny.net/css?family=abeezee:400,400i,700,700i">') \
+    --output "${file%.*}.html"
+done
